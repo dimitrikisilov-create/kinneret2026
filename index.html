@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>כנרת יולי 2026 🌅</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<!-- LZString for URL compression -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+<style>
+:root {
+  --deep: #c0392b;
+  --orange: #e67e22;
+  --gold: #f39c12;
+  --peach: #f8c471;
+  --light: #fdebd0;
+  --pale: #fef9f4;
+  --water: #2471a3;
+  --green: #1e8449;
+  --text: #2c3e50;
+  --med: #5d6d7e;
+  --muted: #aab7b8;
+  --white: #fff;
+  --shadow: 0 4px 20px rgba(192,57,43,0.11);
+  --shadow2: 0 8px 30px rgba(192,57,43,0.18);
+  --r: 16px;
+  --rs: 10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Heebo',sans-serif;background:var(--pale);color:var(--text);min-height:100vh;padding-bottom:100px}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#c0392b 0%,#e67e22 40%,#f39c12 70%,#f8c471 100%);padding:36px 20px 52px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;bottom:-22px;left:0;right:0;height:44px;background:var(--pale);border-radius:50% 50% 0 0/100% 100% 0 0}
+.hero h1{font-size:2.3rem;font-weight:900;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.2);line-height:1.1}
+.hero .sub{color:rgba(255,255,255,.9);font-size:.95rem;margin-top:5px}
+.hero .emo{font-size:1.5rem;margin-bottom:8px}
+
+/* Share bar */
+.share-bar{background:linear-gradient(90deg,rgba(255,255,255,.18),rgba(255,255,255,.28));backdrop-filter:blur(6px);border-radius:14px;margin:12px auto 0;max-width:320px;padding:10px 14px;display:flex;flex-direction:column;gap:8px;border:1px solid rgba(255,255,255,.3)}
+.share-info{display:flex;align-items:center;gap:7px;color:#fff;font-size:.78rem}
+.share-dot{width:8px;height:8px;border-radius:50%;background:#2ecc71;animation:pulse 2s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.35)}}
+.share-btns{display:flex;gap:7px}
+.btn-share{flex:1;padding:8px 10px;border:none;border-radius:10px;font-family:'Heebo',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px;transition:all .15s}
+.btn-share-wa{background:#25D366;color:#fff}
+.btn-share-wa:active{transform:scale(.97);background:#1ebe5d}
+.btn-share-copy{background:rgba(255,255,255,.25);color:#fff;border:1px solid rgba(255,255,255,.4)}
+.btn-share-copy:active{transform:scale(.97)}
+
+/* Nav */
+.nav{display:flex;background:#fff;position:sticky;top:0;z-index:100;border-bottom:2px solid var(--peach);box-shadow:0 2px 10px rgba(0,0,0,.06);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav-btn{flex:1;min-width:68px;padding:13px 6px;border:none;background:none;font-family:'Heebo',sans-serif;font-size:.78rem;font-weight:500;color:var(--muted);cursor:pointer;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:2px;white-space:nowrap}
+.nav-btn .ni{font-size:1.1rem}
+.nav-btn.active{color:var(--deep);border-bottom:3px solid var(--deep);font-weight:700}
+
+/* Content */
+.content{padding:16px;max-width:600px;margin:0 auto}
+.section{display:none}.section.active{display:block}
+
+/* Card */
+.card{background:#fff;border-radius:var(--r);padding:16px;margin-bottom:14px;box-shadow:var(--shadow);border:1px solid rgba(248,196,113,.28);transition:box-shadow .2s}
+.card:hover{box-shadow:var(--shadow2)}
+.card-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--light)}
+.card-title{font-size:1rem;font-weight:700;color:var(--deep);display:flex;align-items:center;gap:6px}
+
+/* Participant */
+.p-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--light)}
+.p-item:last-of-type{border-bottom:none}
+.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.9rem;flex-shrink:0}
+.p-name{flex:1;font-weight:500;font-size:.93rem}
+.badge{font-size:.72rem;padding:3px 9px;border-radius:20px;font-weight:600}
+.bc{background:#d5f5e3;color:var(--green)}.bp{background:var(--light);color:var(--orange)}
+.cb{width:22px;height:22px;border:2px solid var(--peach);border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0}
+.cb.on{background:linear-gradient(135deg,var(--deep),var(--orange));border-color:var(--deep)}
+.cb.on::after{content:'✓';color:#fff;font-size:13px;font-weight:700}
+.p-actions{display:flex;gap:4px}
+
+/* Buttons */
+.btn{padding:9px 14px;border-radius:var(--rs);border:none;font-family:'Heebo',sans-serif;font-size:.88rem;font-weight:600;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:5px}
+.btn-p{background:linear-gradient(135deg,var(--deep),var(--orange));color:#fff}
+.btn-p:active{transform:scale(.97)}
+.btn-g{background:var(--light);color:var(--deep)}
+.btn-d{background:#fde8e8;color:var(--deep)}
+.btn-sm{padding:5px 9px;font-size:.78rem}
+
+/* Input */
+.inp{border:2px solid var(--peach);border-radius:var(--rs);padding:9px 12px;font-family:'Heebo',sans-serif;font-size:.9rem;color:var(--text);background:var(--pale);outline:none;transition:border-color .2s;width:100%}
+.inp:focus{border-color:var(--orange)}
+.sel{border:2px solid var(--peach);border-radius:var(--rs);padding:9px 12px;font-family:'Heebo',sans-serif;font-size:.88rem;background:var(--pale);outline:none;cursor:pointer;color:var(--text);width:100%}
+.ta{border:1px solid var(--peach);border-radius:var(--rs);padding:6px 10px;font-family:'Heebo',sans-serif;font-size:.82rem;background:var(--pale);color:var(--text);resize:none;outline:none;width:100%}
+
+.add-form{display:flex;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--light);flex-wrap:wrap}
+.frow{display:flex;gap:8px}
+.fg{display:flex;flex-direction:column;gap:5px;flex:1}
+.flabel{font-size:.8rem;font-weight:600;color:var(--med)}
+
+/* Schedule */
+.day-hd{background:linear-gradient(135deg,var(--orange),var(--gold));color:#fff;padding:12px 16px;border-radius:var(--rs);font-weight:700;font-size:.98rem;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.ev-item{display:flex;gap:10px;padding:10px;background:var(--pale);border-radius:var(--rs);margin-bottom:8px;border-right:3px solid var(--peach);align-items:flex-start}
+.ev-time{font-size:.78rem;color:var(--orange);font-weight:700;min-width:58px;padding-top:2px;line-height:1.4}
+.ev-details{flex:1}
+.ev-name{font-weight:600;font-size:.93rem}
+.ev-meta{font-size:.76rem;color:var(--med);margin-top:2px}
+.ev-act{display:flex;gap:4px;flex-shrink:0}
+
+/* Logistics */
+.sub-title{font-size:.8rem;font-weight:700;color:#8e44ad;text-transform:uppercase;letter-spacing:.5px;margin:14px 0 8px;display:flex;align-items:center;gap:5px}
+.l-item{display:flex;flex-direction:column;gap:5px;padding:11px 0;border-bottom:1px solid var(--light)}
+.l-item:last-of-type{border-bottom:none}
+.l-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.l-name{flex:1;font-weight:500;min-width:90px;font-size:.92rem}
+.l-meta{font-size:.73rem;color:var(--med)}
+
+/* Modal */
+.overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.48);z-index:200;align-items:flex-end;justify-content:center}
+.overlay.open{display:flex}
+.modal{background:#fff;border-radius:var(--r) var(--r) 0 0;padding:20px;width:100%;max-width:600px;max-height:86vh;overflow-y:auto;animation:up .25s ease-out}
+@keyframes up{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.modal-title{font-size:1.05rem;font-weight:700;color:var(--deep);margin-bottom:16px;display:flex;align-items:center;justify-content:space-between}
+.mc{background:var(--light);border:none;border-radius:50%;width:28px;height:28px;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+
+/* Empty */
+.empty{text-align:center;padding:26px;color:var(--muted);font-size:.88rem}
+.empty .ei{font-size:2.2rem;margin-bottom:6px}
+
+/* Toast */
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);background:var(--text);color:#fff;padding:10px 20px;border-radius:20px;font-size:.83rem;font-weight:500;z-index:300;transition:transform .3s;white-space:nowrap;max-width:90vw;text-align:center}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+/* Unsaved indicator */
+.unsaved-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:linear-gradient(90deg,var(--deep),var(--orange));color:#fff;padding:12px 16px;z-index:150;display:none;align-items:center;justify-content:space-between;gap:10px;font-size:.88rem;font-weight:600;box-shadow:0 -4px 20px rgba(192,57,43,.25)}
+.unsaved-bar.show{display:flex}
+.cbadge{background:var(--light);color:var(--deep);font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:10px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="emo">🌊 🌅 ⛵</div>
+  <h1>כנרת יולי 2026</h1>
+  <div class="sub">11–13 ביולי · בואו נצא לים 🎉</div>
+
+  <div class="share-bar">
+    <div class="share-info">
+      <div class="share-dot"></div>
+      <span id="share-status">טוען נתונים מה-URL...</span>
+    </div>
+    <div class="share-btns">
+      <button class="btn-share btn-share-wa" onclick="shareToWhatsapp()">💬 שתף בוואטסאפ</button>
+      <button class="btn-share btn-share-copy" onclick="copyLink()">🔗 העתק קישור</button>
+    </div>
+  </div>
+</div>
+
+<nav class="nav">
+  <button class="nav-btn active" onclick="switchTab('participants',this)"><span class="ni">👥</span>משתתפים</button>
+  <button class="nav-btn" onclick="switchTab('schedule',this)"><span class="ni">📅</span>לו"ז</button>
+  <button class="nav-btn" onclick="switchTab('food',this)"><span class="ni">🍱</span>אוכל</button>
+  <button class="nav-btn" onclick="switchTab('gear',this)"><span class="ni">🎒</span>ציוד</button>
+</nav>
+
+<div class="content">
+
+  <!-- PARTICIPANTS -->
+  <div id="sec-participants" class="section active">
+    <div class="card">
+      <div class="card-hd">
+        <span class="card-title">👥 משתתפים <span id="p-count" class="cbadge"></span></span>
+      </div>
+      <div id="p-list"></div>
+      <div class="add-form">
+        <input class="inp" id="new-p-name" placeholder="שם מלא" style="flex:1;min-width:120px" />
+        <button class="btn btn-p" onclick="addParticipant()">➕ הוסף</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE -->
+  <div id="sec-schedule" class="section">
+    <div id="schedule-content"></div>
+  </div>
+
+  <!-- FOOD -->
+  <div id="sec-food" class="section">
+    <div class="card">
+      <div class="card-hd">
+        <span class="card-title">🍱 אוכל</span>
+        <button class="btn btn-g btn-sm" onclick="openAddLogModal('food')">➕ הוסף</button>
+      </div>
+      <div class="sub-title">🛒 לקנות</div>
+      <div id="food-buy"></div>
+      <div class="sub-title">🎒 להביא</div>
+      <div id="food-bring"></div>
+    </div>
+  </div>
+
+  <!-- GEAR -->
+  <div id="sec-gear" class="section">
+    <div class="card">
+      <div class="card-hd">
+        <span class="card-title">🎒 ציוד כללי</span>
+        <button class="btn btn-g btn-sm" onclick="openAddLogModal('gear')">➕ הוסף</button>
+      </div>
+      <div class="sub-title">🛒 לקנות</div>
+      <div id="gear-buy"></div>
+      <div class="sub-title">🎒 להביא</div>
+      <div id="gear-bring"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Unsaved bar -->
+<div class="unsaved-bar" id="unsaved-bar">
+  <span>⚠️ יש שינויים לא משותפים</span>
+  <button class="btn-share btn-share-wa" style="padding:7px 12px;font-size:.8rem" onclick="shareToWhatsapp()">💬 שתף עכשיו</button>
+</div>
+
+<!-- Participant Edit Modal -->
+<div class="overlay" id="pedit-modal">
+  <div class="modal">
+    <div class="modal-title">
+      <span>✏️ ערוך משתתף</span>
+      <button class="mc" onclick="closeModal('pedit-modal')">✕</button>
+    </div>
+    <div class="fg" style="margin-bottom:14px">
+      <label class="flabel">שם מלא</label>
+      <input class="inp" id="pedit-name" placeholder="שם מלא" />
+    </div>
+    <div class="fg" style="margin-bottom:16px">
+      <label class="flabel">סטטוס הגעה</label>
+      <select class="sel" id="pedit-coming">
+        <option value="true">✅ מגיע/ה</option>
+        <option value="false">⏳ ממתין/ה</option>
+      </select>
+    </div>
+    <div class="frow">
+      <button class="btn btn-p" style="flex:1" onclick="saveParticipantEdit()">💾 שמור</button>
+      <button class="btn btn-g" onclick="closeModal('pedit-modal')">ביטול</button>
+    </div>
+  </div>
+</div>
+
+<!-- Event Modal -->
+<div class="overlay" id="ev-modal">
+  <div class="modal">
+    <div class="modal-title">
+      <span id="ev-modal-title">הוסף פעילות</span>
+      <button class="mc" onclick="closeModal('ev-modal')">✕</button>
+    </div>
+    <div class="fg" style="margin-bottom:12px">
+      <label class="flabel">יום</label>
+      <select class="sel" id="ev-day">
+        <option value="0">שישי 11.7</option>
+        <option value="1">שבת 12.7</option>
+        <option value="2">ראשון 13.7</option>
+      </select>
+    </div>
+    <div class="fg" style="margin-bottom:12px">
+      <label class="flabel">שם הפעילות</label>
+      <input class="inp" id="ev-name" placeholder="לדוגמה: ארוחת בוקר..." />
+    </div>
+    <div class="frow" style="margin-bottom:12px">
+      <div class="fg">
+        <label class="flabel">התחלה</label>
+        <input class="inp" id="ev-start" type="time" />
+      </div>
+      <div class="fg">
+        <label class="flabel">סיום</label>
+        <input class="inp" id="ev-end" type="time" />
+      </div>
+    </div>
+    <div class="fg" style="margin-bottom:12px">
+      <label class="flabel">👤 אחראי</label>
+      <input class="inp" id="ev-resp" placeholder="מי אחראי?" />
+    </div>
+    <div class="fg" style="margin-bottom:16px">
+      <label class="flabel">📝 הערות</label>
+      <textarea class="ta" id="ev-notes" rows="2" placeholder="הערות..."></textarea>
+    </div>
+    <div class="frow">
+      <button class="btn btn-p" style="flex:1" onclick="saveEvent()">💾 שמור</button>
+      <button class="btn btn-g" onclick="closeModal('ev-modal')">ביטול</button>
+    </div>
+  </div>
+</div>
+
+<!-- Logistics Modal -->
+<div class="overlay" id="log-modal">
+  <div class="modal">
+    <div class="modal-title">
+      <span id="log-modal-title">הוסף פריט</span>
+      <button class="mc" onclick="closeModal('log-modal')">✕</button>
+    </div>
+    <div class="fg" style="margin-bottom:12px">
+      <label class="flabel">שם הפריט</label>
+      <input class="inp" id="log-name" placeholder="לדוגמה: פחמים..." />
+    </div>
+    <div class="frow" style="margin-bottom:12px">
+      <div class="fg">
+        <label class="flabel">קטגוריה</label>
+        <select class="sel" id="log-cat">
+          <option value="buy">🛒 לקנות</option>
+          <option value="bring">🎒 להביא</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label class="flabel">סטטוס</label>
+        <select class="sel" id="log-status">
+          <option value="pending">⏳ ממתין</option>
+          <option value="inprogress">🔄 בתהליך</option>
+          <option value="done">✅ הושלם</option>
+        </select>
+      </div>
+    </div>
+    <div class="fg" style="margin-bottom:12px">
+      <label class="flabel">👤 אחראי</label>
+      <input class="inp" id="log-resp" placeholder="מי אחראי?" />
+    </div>
+    <div class="fg" style="margin-bottom:16px">
+      <label class="flabel">📝 הערות</label>
+      <textarea class="ta" id="log-notes" rows="2" placeholder="הערות..."></textarea>
+    </div>
+    <div class="frow">
+      <button class="btn btn-p" style="flex:1" onclick="saveLogistics()">💾 שמור</button>
+      <button class="btn btn-g" onclick="closeModal('log-modal')">ביטול</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// =========================================================
+// DATA — default state
+// =========================================================
+const DEFAULT = {
+  participants: [
+    {name:'דימיטרי', coming:true},
+    {name:'יובל', coming:true},
+    {name:'נועה', coming:false},
+  ],
+  schedule: [
+    [
+      {name:'הגעה ואכסון', start:'16:00', end:'18:00', resp:'', notes:''},
+      {name:'ארוחת ערב על האש', start:'19:00', end:'21:00', resp:'', notes:''},
+    ],
+    [
+      {name:'ארוחת בוקר', start:'08:00', end:'09:00', resp:'', notes:''},
+      {name:'שחייה בכנרת', start:'10:00', end:'13:00', resp:'', notes:''},
+      {name:'מנוחה וצהריים', start:'13:00', end:'15:00', resp:'', notes:''},
+      {name:'שקיעה וחגיגה', start:'19:30', end:'22:00', resp:'', notes:''},
+    ],
+    [
+      {name:'ארוחת בוקר + סידור', start:'08:00', end:'10:00', resp:'', notes:''},
+      {name:'פעילות חופשית', start:'10:00', end:'12:00', resp:'', notes:''},
+      {name:'נסיעה חזרה', start:'13:00', end:'15:00', resp:'', notes:''},
+    ]
+  ],
+  food: [
+    {name:'בשר לגריל', cat:'buy', resp:'', status:'pending', notes:''},
+    {name:'ירקות וסלטים', cat:'buy', resp:'', status:'pending', notes:''},
+    {name:'לחם ופיתות', cat:'buy', resp:'', status:'pending', notes:''},
+    {name:'שתייה קלה ומים', cat:'buy', resp:'', status:'pending', notes:''},
+    {name:'אלכוהול', cat:'bring', resp:'', status:'pending', notes:''},
+    {name:'חטיפים', cat:'bring', resp:'', status:'pending', notes:''},
+  ],
+  gear: [
+    {name:'מנגל + פחמים', cat:'buy', resp:'', status:'pending', notes:''},
+    {name:'כלים חד-פעמיים', cat:'buy', resp:'', status:'pending', notes:''},
+    {name:'מגבות', cat:'bring', resp:'', status:'pending', notes:''},
+    {name:'כיסאות וצ׳ייר', cat:'bring', resp:'', status:'pending', notes:''},
+    {name:'גלגל ים', cat:'bring', resp:'', status:'pending', notes:''},
+    {name:'קרם הגנה', cat:'bring', resp:'', status:'pending', notes:''},
+  ]
+};
+
+// =========================================================
+// STATE
+// =========================================================
+let S = JSON.parse(JSON.stringify(DEFAULT));
+let hasUnsaved = false;
+
+// =========================================================
+// URL encode/decode
+// =========================================================
+function encodeState(s) {
+  const json = JSON.stringify(s);
+  return LZString.compressToEncodedURIComponent(json);
+}
+
+function decodeState(str) {
+  try {
+    const json = LZString.decompressFromEncodedURIComponent(str);
+    return json ? JSON.parse(json) : null;
+  } catch(e) { return null; }
+}
+
+function buildURL(s) {
+  const base = window.location.href.split('#')[0];
+  return base + '#' + encodeState(s);
+}
+
+function loadFromURL() {
+  const hash = window.location.hash.slice(1);
+  if (!hash) return false;
+  const decoded = decodeState(hash);
+  if (decoded && decoded.participants) {
+    S = decoded;
+    return true;
+  }
+  return false;
+}
+
+// =========================================================
+// INIT
+// =========================================================
+function init() {
+  const fromURL = loadFromURL();
+  document.getElementById('share-status').textContent =
+    fromURL ? '✅ נטענו נתונים מהקישור המשותף' : '📋 נטענו נתוני ברירת מחדל';
+  renderAll();
+}
+
+function setUnsaved(v) {
+  hasUnsaved = v;
+  const bar = document.getElementById('unsaved-bar');
+  if (v) bar.classList.add('show'); else bar.classList.remove('show');
+}
+
+// =========================================================
+// SHARE
+// =========================================================
+function shareToWhatsapp() {
+  const url = buildURL(S);
+  const msg = encodeURIComponent('🌅 כנרת יולי 2026 – לו"ז ולוגיסטיקה מעודכנים\n' + url);
+  window.open('https://wa.me/?text=' + msg, '_blank');
+  setUnsaved(false);
+  showToast('נפתח וואטסאפ לשיתוף! 💬');
+}
+
+function copyLink() {
+  const url = buildURL(S);
+  navigator.clipboard.writeText(url).then(() => {
+    showToast('קישור הועתק ✅');
+    setUnsaved(false);
+  }).catch(() => {
+    // fallback
+    const ta = document.createElement('textarea');
+    ta.value = url;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast('קישור הועתק ✅');
+    setUnsaved(false);
+  });
+}
+
+// =========================================================
+// RENDER ALL
+// =========================================================
+function renderAll() {
+  renderParticipants();
+  renderSchedule();
+  renderLogistics();
+}
+
+// =========================================================
+// PARTICIPANTS
+// =========================================================
+function renderParticipants() {
+  const coming = S.participants.filter(p=>p.coming).length;
+  document.getElementById('p-count').textContent = `${coming}/${S.participants.length} מגיעים`;
+
+  const el = document.getElementById('p-list');
+  if (!S.participants.length) {
+    el.innerHTML = '<div class="empty"><div class="ei">👤</div>אין משתתפים עדיין</div>';
+    return;
+  }
+  el.innerHTML = S.participants.map((p,i) => `
+    <div class="p-item">
+      <div class="avatar">${p.name.charAt(0)}</div>
+      <span class="p-name">${p.name}</span>
+      <span class="badge ${p.coming?'bc':'bp'}">${p.coming?'✅ מגיע':'⏳ ממתין'}</span>
+      <div class="p-actions">
+        <button class="btn btn-g btn-sm" onclick="openEditParticipant(${i})" title="ערוך">✏️</button>
+        <button class="btn btn-d btn-sm" onclick="deleteParticipant(${i})" title="מחק">🗑</button>
+        <div class="cb ${p.coming?'on':''}" onclick="toggleParticipant(${i})"></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+let editingPIdx = null;
+function openEditParticipant(i) {
+  editingPIdx = i;
+  const p = S.participants[i];
+  document.getElementById('pedit-name').value = p.name;
+  document.getElementById('pedit-coming').value = String(p.coming);
+  document.getElementById('pedit-modal').classList.add('open');
+}
+
+function saveParticipantEdit() {
+  const name = document.getElementById('pedit-name').value.trim();
+  if (!name) return;
+  S.participants[editingPIdx].name = name;
+  S.participants[editingPIdx].coming = document.getElementById('pedit-coming').value === 'true';
+  closeModal('pedit-modal');
+  setUnsaved(true);
+  renderParticipants();
+  showToast('משתתף עודכן ✅');
+}
+
+function toggleParticipant(i) {
+  S.participants[i].coming = !S.participants[i].coming;
+  setUnsaved(true);
+  renderParticipants();
+  showToast(S.participants[i].coming ? `${S.participants[i].name} מגיע! 🎉` : `${S.participants[i].name} עדכן סטטוס`);
+}
+
+function deleteParticipant(i) {
+  const name = S.participants[i].name;
+  S.participants.splice(i, 1);
+  setUnsaved(true);
+  renderParticipants();
+  showToast(`${name} הוסר מהרשימה`);
+}
+
+function addParticipant() {
+  const name = document.getElementById('new-p-name').value.trim();
+  if (!name) return;
+  S.participants.push({name, coming:false});
+  document.getElementById('new-p-name').value = '';
+  setUnsaved(true);
+  renderParticipants();
+  showToast(`${name} נוסף 👋`);
+}
+document.getElementById('new-p-name').addEventListener('keydown', e => {
+  if (e.key==='Enter') addParticipant();
+});
+
+// =========================================================
+// SCHEDULE
+// =========================================================
+const DAYS = [
+  {label:'שישי 11.7', icon:'🌞', name:'יום א׳'},
+  {label:'שבת 12.7', icon:'⛵', name:'יום ב׳'},
+  {label:'ראשון 13.7', icon:'🌊', name:'יום ג׳'}
+];
+
+function renderSchedule() {
+  document.getElementById('schedule-content').innerHTML = DAYS.map((d,di) => `
+    <div class="card" style="padding-bottom:8px">
+      <div class="day-hd">${d.icon} ${d.name} · ${d.label}</div>
+      <div id="day-${di}">${renderDayEvents(di)}</div>
+      <button class="btn btn-g" style="width:100%;margin-top:8px;justify-content:center" onclick="openAddEv(${di})">➕ הוסף פעילות</button>
+    </div>
+  `).join('');
+}
+
+function renderDayEvents(di) {
+  const evs = S.schedule[di];
+  if (!evs.length) return '<div class="empty" style="padding:14px"><div class="ei">📋</div>אין פעילויות עדיין</div>';
+  return evs.map((ev,ei) => `
+    <div class="ev-item">
+      <div class="ev-time">${ev.start||'--:--'}<br><span style="color:var(--muted);font-weight:400">${ev.end||''}</span></div>
+      <div class="ev-details">
+        <div class="ev-name">${ev.name}</div>
+        ${ev.resp?`<div class="ev-meta">👤 ${ev.resp}</div>`:''}
+        ${ev.notes?`<div class="ev-meta">📝 ${ev.notes}</div>`:''}
+      </div>
+      <div class="ev-act">
+        <button class="btn btn-g btn-sm" onclick="openEditEv(${di},${ei})">✏️</button>
+        <button class="btn btn-d btn-sm" onclick="deleteEv(${di},${ei})">🗑</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+let evDay=null, evIdx=null;
+function openAddEv(di) {
+  evDay=di; evIdx=null;
+  document.getElementById('ev-modal-title').textContent='הוסף פעילות';
+  document.getElementById('ev-day').value=di;
+  ['ev-name','ev-start','ev-end','ev-resp','ev-notes'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('ev-modal').classList.add('open');
+}
+function openEditEv(di,ei) {
+  evDay=di; evIdx=ei;
+  const ev=S.schedule[di][ei];
+  document.getElementById('ev-modal-title').textContent='ערוך פעילות';
+  document.getElementById('ev-day').value=di;
+  document.getElementById('ev-name').value=ev.name;
+  document.getElementById('ev-start').value=ev.start;
+  document.getElementById('ev-end').value=ev.end;
+  document.getElementById('ev-resp').value=ev.resp||'';
+  document.getElementById('ev-notes').value=ev.notes||'';
+  document.getElementById('ev-modal').classList.add('open');
+}
+function saveEvent() {
+  const di=parseInt(document.getElementById('ev-day').value);
+  const ev={
+    name:document.getElementById('ev-name').value.trim(),
+    start:document.getElementById('ev-start').value,
+    end:document.getElementById('ev-end').value,
+    resp:document.getElementById('ev-resp').value.trim(),
+    notes:document.getElementById('ev-notes').value.trim()
+  };
+  if(!ev.name) return;
+  if(evIdx!==null) { S.schedule[evDay][evIdx]=ev; showToast('פעילות עודכנה ✅'); }
+  else { S.schedule[di].push(ev); S.schedule[di].sort((a,b)=>(a.start||'').localeCompare(b.start||'')); showToast('פעילות נוספה 🎉'); }
+  closeModal('ev-modal');
+  setUnsaved(true);
+  renderSchedule();
+}
+function deleteEv(di,ei) {
+  S.schedule[di].splice(ei,1);
+  setUnsaved(true);
+  renderSchedule();
+  showToast('פעילות נמחקה');
+}
+
+// =========================================================
+// LOGISTICS
+// =========================================================
+function renderLogistics() {
+  ['food','gear'].forEach(type => {
+    const arr = S[type];
+    const buyEl = document.getElementById(`${type}-buy`);
+    const bringEl = document.getElementById(`${type}-bring`);
+    const buy = arr.filter(it=>it.cat==='buy');
+    const bring = arr.filter(it=>it.cat==='bring');
+    buyEl.innerHTML = buy.length ? buy.map(it=>renderLItem(type, arr.indexOf(it), it)).join('') : '<div class="empty" style="padding:8px 0;font-size:.83rem">אין פריטים</div>';
+    bringEl.innerHTML = bring.length ? bring.map(it=>renderLItem(type, arr.indexOf(it), it)).join('') : '<div class="empty" style="padding:8px 0;font-size:.83rem">אין פריטים</div>';
+  });
+}
+
+function stLabel(s){return s==='done'?'✅ הושלם':s==='inprogress'?'🔄 בתהליך':'⏳ ממתין'}
+
+function renderLItem(type,idx,it) {
+  return `
+  <div class="l-item">
+    <div class="l-row">
+      <div class="cb ${it.status==='done'?'on':''}" onclick="toggleLDone('${type}',${idx})"></div>
+      <span class="l-name" style="${it.status==='done'?'text-decoration:line-through;color:var(--muted)':''}">${it.name}</span>
+      <button class="btn btn-g btn-sm" onclick="openEditLogModal('${type}',${idx})">✏️</button>
+      <button class="btn btn-d btn-sm" onclick="deleteLog('${type}',${idx})">🗑</button>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <span class="l-meta">${stLabel(it.status)}</span>
+      ${it.resp?`<span class="l-meta">👤 ${it.resp}</span>`:''}
+      ${it.notes?`<span class="l-meta">📝 ${it.notes}</span>`:''}
+    </div>
+  </div>`;
+}
+
+function toggleLDone(type,idx){
+  S[type][idx].status = S[type][idx].status==='done'?'pending':'done';
+  setUnsaved(true);
+  renderLogistics();
+}
+function deleteLog(type,idx){
+  S[type].splice(idx,1);
+  setUnsaved(true);
+  renderLogistics();
+  showToast('פריט נמחק');
+}
+
+let logType=null, logIdx=null;
+function openAddLogModal(type){
+  logType=type; logIdx=null;
+  document.getElementById('log-modal-title').textContent = type==='food'?'➕ פריט אוכל':'➕ ציוד';
+  ['log-name','log-resp','log-notes'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('log-cat').value='buy';
+  document.getElementById('log-status').value='pending';
+  document.getElementById('log-modal').classList.add('open');
+}
+function openEditLogModal(type,idx){
+  logType=type; logIdx=idx;
+  const it=S[type][idx];
+  document.getElementById('log-modal-title').textContent='ערוך פריט';
+  document.getElementById('log-name').value=it.name;
+  document.getElementById('log-cat').value=it.cat;
+  document.getElementById('log-resp').value=it.resp||'';
+  document.getElementById('log-status').value=it.status||'pending';
+  document.getElementById('log-notes').value=it.notes||'';
+  document.getElementById('log-modal').classList.add('open');
+}
+function saveLogistics(){
+  const item={
+    name:document.getElementById('log-name').value.trim(),
+    cat:document.getElementById('log-cat').value,
+    resp:document.getElementById('log-resp').value.trim(),
+    status:document.getElementById('log-status').value,
+    notes:document.getElementById('log-notes').value.trim()
+  };
+  if(!item.name) return;
+  if(logIdx!==null){S[logType][logIdx]=item;showToast('פריט עודכן ✅');}
+  else{S[logType].push(item);showToast('פריט נוסף 🎉');}
+  closeModal('log-modal');
+  setUnsaved(true);
+  renderLogistics();
+}
+
+// =========================================================
+// NAV / MODAL / TOAST
+// =========================================================
+function switchTab(tab,btn){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('sec-'+tab).classList.add('active');
+  btn.classList.add('active');
+}
+function closeModal(id){document.getElementById(id).classList.remove('open')}
+document.querySelectorAll('.overlay').forEach(m=>{
+  m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open')});
+});
+
+let tt;
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('show'),2600);
+}
+
+// =========================================================
+// BOOT
+// =========================================================
+init();
+</script>
+</body>
+</html>
